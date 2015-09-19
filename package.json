@@ -1,0 +1,44 @@
+{
+  "name": "quote-cli",
+  "version": "1.0.0",
+  "description": "Get a random quote or the quote of the day in your CLI",
+  "license": "MIT",
+  "repository": "riyadhalnur/quote-cli",
+  "author": {
+    "name": "Riyadh Al Nur",
+    "email": "riyadhalnur@verticalaxisbd.com",
+    "url": "blog.verticalaxisbd.com"
+  },
+  "bin": "cli.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "xo && node test.js"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    "quote"
+  ],
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "meow": "^3.3.0",
+    "update-notifier": "^0.5.0",
+    "got": "~4.2.0",
+    "lodash": "~3.10.1"
+  },
+  "devDependencies": {
+    "ava": "^0.1.0",
+    "xo": "^0.7.1"
+  },
+  "xo": {
+    "envs": [
+      "node"
+    ]
+  }
+}
