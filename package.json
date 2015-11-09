@@ -1,6 +1,6 @@
 {
   "name": "quote-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get a random quote or the quote of the day in your CLI",
   "license": "MIT",
   "repository": "riyadhalnur/quote-cli",
