@@ -4,7 +4,7 @@
 var meow = require('meow');
 var chalk = require('chalk');
 var updateNotifier = require('update-notifier');
-var quote = require('./');
+var quote = require('./index.js');
 var pkg = require('./package.json');
 
 var cli = meow({
