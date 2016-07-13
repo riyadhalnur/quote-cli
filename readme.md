@@ -1,4 +1,4 @@
-# quote-cli [![Build Status](https://travis-ci.org/riyadhalnur/quote-cli.svg?branch=master)](https://travis-ci.org/riyadhalnur/quote-cli)
+# quote-cli [![Build Status](https://travis-ci.org/riyadhalnur/quote-cli.svg?branch=master)](https://travis-ci.org/riyadhalnur/quote-cli) [![Dependency Status](https://dependencyci.com/github/riyadhalnur/quote-cli/badge)](https://dependencyci.com/github/riyadhalnur/quote-cli)
 
 Get a random quote or the quote of the day in your CLI
 
