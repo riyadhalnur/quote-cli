@@ -1,6 +1,6 @@
 'use strict';
 
-const ava = require('ava').test;
+const test = require('ava').test;
 const quote = require('./');
 
 test('Quote', function (t) {
