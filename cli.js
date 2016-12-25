@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 'use strict';
 
-var meow = require('meow');
-var chalk = require('chalk');
-var updateNotifier = require('update-notifier');
-var quote = require('./index.js');
-var pkg = require('./package.json');
+const meow = require('meow');
+const chalk = require('chalk');
+const updateNotifier = require('update-notifier');
+const pkg = require('./package.json');
+const quote = require('./index.js');
 
-var cli = meow({
+const cli = meow({
 	help: [
 		'Usage',
 		'  $ quote-cli',
