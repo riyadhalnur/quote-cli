@@ -1,7 +1,7 @@
 'use strict';
 
-var got = require('got');
-var _ = require('lodash');
+const got = require('got');
+const _ = require('lodash');
 
 module.exports = function (opts, callback) {
 	opts = opts || '';
@@ -9,7 +9,7 @@ module.exports = function (opts, callback) {
 	var requestURL = (opts === 'qotd') ? 'https://favqs.com/api/qotd.json' : 'https://favqs.com/api/quotes/';
 
 	var headers = {
-		'Authorization': 'Token token=a857a430e3a1e6d481eaafc1ab6e1f19'
+		Authorization: 'Token token=a857a430e3a1e6d481eaafc1ab6e1f19'
 	};
 
 	got(requestURL, {headers: headers}, function (err, data, response) {
