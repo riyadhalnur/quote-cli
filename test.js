@@ -1,9 +1,9 @@
 'use strict';
 
-var ava = require('ava');
-var quote = require('./');
+const ava = require('ava').test;
+const quote = require('./');
 
-ava('Quote', function (t) {
+test('Quote', function (t) {
 	quote('qotd', function (err, result) {
 		t.assert(!err, err);
 		t.assert(result, result);
