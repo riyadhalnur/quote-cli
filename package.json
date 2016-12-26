@@ -9,7 +9,9 @@
     "email": "riyadhalnur@verticalaxisbd.com",
     "url": "blog.verticalaxisbd.com"
   },
-  "bin": "cli.js",
+  "bin": {
+    "quote": "cli.js"
+  },
   "engines": {
     "node": ">= 4"
   },
