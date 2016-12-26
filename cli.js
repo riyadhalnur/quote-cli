@@ -10,15 +10,15 @@ const quote = require('./index.js');
 const cli = meow({
 	help: [
 		'Usage',
-		'  $ quote-cli',
+		'  $ quote [options]',
 		'',
 		'Options',
-		'	 qotd Display quote of the day',
+		'  qotd Display quote of the day',
 		'',
 		'Examples',
-		'  $ quote-cli',
+		'  $ quote',
 		'  To be or not be, that is the question. - William Shakespeare',
-		'  $ quote-cli qotd',
+		'  $ quote qotd',
 		'  Wars teach us not to love our enemies, but to hate our allies. - W. L. George'
 	]
 });
