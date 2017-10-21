@@ -28,7 +28,7 @@
     "quote"
   ],
   "dependencies": {
-    "chalk": "^1.1.1",
+    "chalk": "^2.0.0",
     "meow": "^3.3.0",
     "update-notifier": "^2.0.0",
     "got": "~7.0.0",
