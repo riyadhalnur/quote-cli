@@ -4,33 +4,37 @@
 const meow = require('meow');
 const chalk = require('chalk');
 const updateNotifier = require('update-notifier');
+
 const pkg = require('./package.json');
-const quote = require('./index.js');
+const quote = require('./index');
 
-const cli = meow({
-	help: [
-		'Usage',
-		'  $ quote [options]',
-		'',
-		'Options',
-		'  qotd Display quote of the day',
-		'',
-		'Examples',
-		'  $ quote',
-		'  To be or not be, that is the question. - William Shakespeare',
-		'  $ quote qotd',
-		'  Wars teach us not to love our enemies, but to hate our allies. - W. L. George'
-	]
-});
+const cli = meow(
+  `
+Usage
+  $ quote [options]
 
-updateNotifier({pkg: pkg}).notify();
+Options
+  qotd Display quote of the day
 
-quote(cli.input[0], function (err, result) {
-	if (err) {
-		console.log(chalk.bold.red(err));
-		process.exit(1);
-	}
+Examples
+  $ quote
+  To be or not be, that is the question. - William Shakespeare
+  $ quote qotd
+  Wars teach us not to love our enemies, but to hate our allies. - W. L. George
+`,
+  {}
+);
 
-	console.log(chalk.cyan(chalk.yellow(result.quote.body) + ' - ' + result.quote.author));
-	process.exit();
-});
+updateNotifier({ pkg: pkg }).notify();
+
+quote(cli.input[0])
+  .then(result => {
+    console.log(
+      chalk.cyan(chalk.yellow(result.quote.body) + ' - ' + result.quote.author)
+    );
+    process.exit(0);
+  })
+  .catch(err => {
+    console.log(chalk.bold.red(err));
+    process.exit(1);
+  });

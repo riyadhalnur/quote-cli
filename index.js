@@ -1,31 +1,30 @@
 'use strict';
 
-const got = require('got');
+const axios = require('axios');
 const _ = require('lodash');
 
-module.exports = function (opts, callback) {
-	opts = opts || '';
+const baseUrl = 'https://favqs.com/api/';
+const headers = {
+  Authorization: 'Token token=a857a430e3a1e6d481eaafc1ab6e1f19'
+};
 
-	var requestURL = (opts === 'qotd') ? 'https://favqs.com/api/qotd.json' : 'https://favqs.com/api/quotes/';
+module.exports = (opts, callback) => {
+  return new Promise((resolve, reject) => {
+    opts = opts || '';
 
-	var headers = {
-		Authorization: 'Token token=a857a430e3a1e6d481eaafc1ab6e1f19'
-	};
+    axios({
+      url: opts === 'qotd' ? '/qotd.json' : '/quotes/',
+      baseURL: baseUrl,
+      headers: headers
+    })
+      .then(response => {
+        if (response.data.quotes && _.isArray(response.data.quotes)) {
+          let result = { quote: _.sample(response.data.quotes) };
+          return resolve(result);
+        }
 
-	got(requestURL, {headers: headers}, function (err, data, response) {
-		if (err) {
-			return callback(err);
-		}
-
-		if (response.statusCode === 200 && data) {
-			var parsedData = JSON.parse(data);
-
-			if (parsedData.quotes && _.isArray(parsedData.quotes)) {
-				var result = {quote: _.sample(parsedData.quotes)};
-				callback(null, result);
-			} else {
-				callback(null, parsedData);
-			}
-		}
-	});
+        return resolve(response.data);
+      })
+      .catch(err => reject(err));
+  });
 };
