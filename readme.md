@@ -1,5 +1,5 @@
 # quote-cli  
-[![Build Status](https://travis-ci.org/riyadhalnur/quote-cli.svg?branch=master)](https://travis-ci.org/riyadhalnur/quote-cli) [![Dependency Status](https://dependencyci.com/github/riyadhalnur/quote-cli/badge)](https://dependencyci.com/github/riyadhalnur/quote-cli) [![Coverage Status](https://coveralls.io/repos/github/riyadhalnur/quote-cli/badge.svg?branch=master)](https://coveralls.io/github/riyadhalnur/quote-cli?branch=master)  
+[![Build Status](https://travis-ci.org/riyadhalnur/quote-cli.svg?branch=master)](https://travis-ci.org/riyadhalnur/quote-cli) [![Dependency Status](https://dependencyci.com/github/riyadhalnur/quote-cli/badge)](https://dependencyci.com/github/riyadhalnur/quote-cli) [![Coverage Status](https://coveralls.io/repos/github/riyadhalnur/quote-cli/badge.svg?branch=master)](https://coveralls.io/github/riyadhalnur/quote-cli?branch=master) [![Known Vulnerabilities](https://snyk.io/test/github/riyadhalnur/quote-cli/badge.svg)](https://snyk.io/test/github/riyadhalnur/quote-cli)  
 
 > Get a random quote or the quote of the day in your CLI
 
@@ -10,7 +10,7 @@
 $ npm install -g quote-cli
 ```
 
-```
+```bash
 $ quote --help
 
   Usage
