@@ -42,7 +42,7 @@
     "chalk": "^2.0.0",
     "lodash": "4.17.13",
     "meow": "^5.0.0",
-    "update-notifier": "^2.0.0"
+    "update-notifier": "^4.0.0"
   },
   "devDependencies": {
     "chai": "4.1.2",
