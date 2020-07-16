@@ -40,7 +40,7 @@
   "dependencies": {
     "axios": "0.19.2",
     "chalk": "4.0.0",
-    "lodash": "4.17.13",
+    "lodash": "4.17.19",
     "meow": "6.1.0",
     "update-notifier": "4.1.0"
   },
