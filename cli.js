@@ -28,13 +28,13 @@ Examples
 updateNotifier({ pkg: pkg }).notify();
 
 quote(cli.input[0])
-  .then(result => {
+  .then((result) => {
     console.log(
       chalk.cyan(chalk.yellow(result.quote.body) + ' - ' + result.quote.author)
     );
     process.exit(0);
   })
-  .catch(err => {
+  .catch((err) => {
     console.log(chalk.bold.red(err));
     process.exit(1);
   });

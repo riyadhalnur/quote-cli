@@ -5,7 +5,7 @@ const _ = require('lodash');
 
 const baseUrl = 'https://favqs.com/api/';
 const headers = {
-  Authorization: 'Token token=a857a430e3a1e6d481eaafc1ab6e1f19'
+  Authorization: 'Token token=a857a430e3a1e6d481eaafc1ab6e1f19',
 };
 
 module.exports = (opts, callback) => {
@@ -13,11 +13,11 @@ module.exports = (opts, callback) => {
     opts = opts || '';
 
     axios({
-      url: opts === 'qotd' ? '/qotd.json' : '/quotes/',
+      url: opts === 'qotd' ? '/qotd' : '/quotes',
       baseURL: baseUrl,
-      headers: headers
+      headers: headers,
     })
-      .then(response => {
+      .then((response) => {
         if (response.data.quotes && _.isArray(response.data.quotes)) {
           let result = { quote: _.sample(response.data.quotes) };
           return resolve(result);
@@ -25,6 +25,6 @@ module.exports = (opts, callback) => {
 
         return resolve(response.data);
       })
-      .catch(err => reject(err));
+      .catch((err) => reject(err));
   });
 };
