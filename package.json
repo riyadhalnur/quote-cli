@@ -37,7 +37,7 @@
     "quote"
   ],
   "dependencies": {
-    "axios": "1.8.2",
+    "axios": "1.8.3",
     "chalk": "4.1.1",
     "lodash": "4.17.21",
     "meow": "9.0.0",
